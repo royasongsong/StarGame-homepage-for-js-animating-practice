@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery全屏滚动效果</title>
+</head>
+<style type="text/css">
+    * {margin: 0;padding: 0}
+    html,body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: rgba(0,0,0,0.5);
+    }
+    section {
+        height: 100%;
+    }
+    .banner {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top: 0;
+    }
+    .banner ul {
+        color: red;
+        height: 100%;
+        line-height: 100%;
+        text-align: center;
+    }
+    .banner ul li {
+     width: 100%;
+     height: 100%;
+     position: relative;
+    }
+    .banner ul li  a {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-left: -40px;
+        bottom: 0px;
+        background: red;
+        text-decoration: none;
+    }
+    .banner ul li  a:after {
+        content: "下一页";
+        text-align: center;
+        line-height: 80px;
+    }
+    .banner ul li:last-child  a:after {
+        content: "回到顶部";
+        text-align: center;
+        line-height: 80px;
+    }
+</style>
+<body>
+<section>
+    <div class="banner" id="jq_banner">
+        <ul>
+            <li>第一屏<a href="javascript:void(0)" class="up_click"></a></li>
+            <li>第二屏<a href="javascript:void(0)" class="up_click"></a></li>
+            <li>第三屏<a href="javascript:void(0)" class="up_click"></a></li>
+            <li>第四屏<a href="javascript:void(0)" class="up_click"></a></li>
+            <li>第五屏<a href="javascript:void(0)" class="up_top"></a></li>
+        </ul>
+    </div>
+</section>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.0/jquery.js"></script>
+<script type="text/javascript" src="plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript">
+    var screen=$("#jq_banner li").first().height(),
+            total=$("#jq_banner li").length,
+            index=0;
+    var init=function(){
+        screen=$("#jq_banner li").first().height();
+        $("#jq_banner").animate({top: -index*screen},1000);
+    }
+    //e.wheelDelta滚轮方向(除了火狐以外，其他貌似都支持,这里用jquery.mousewheel.min.js代替)
+    var wheel=function(event,e){//这里的e是滚轮对应的值，1为往上滚，-1为往下滚
+        console.log(e);
+        if(!$("#jq_banner").is(":animated")){
+            console.log(e);
+            if(e>0){ //往上滚动是正，往下滚动是负
+                if(index>0){
+                    index--;
+                }
+            }else {
+                if(index<total-1){
+                    index++;
+                }
+            }
+            $("#jq_banner").animate({top: -index*screen},1000);
+        }
+    }
+    $(".up_click").click(function(){//下一屏
+        var currentindex=$(this).parent().index();
+        index=currentindex;
+        if(index<total-1){
+            index++;
+        }
+        $("#jq_banner").animate({top: -index*screen},1000);
+    });
+    $(".up_top").click(function(){//回到顶部
+        $("#jq_banner").animate({top: 0},1000);
+        index=0; //恢复索引为初始值
+    });
+    $(document).mousewheel(wheel);
+   $(window).resize(init);
+ 
+</script>
+</body>
+</html>

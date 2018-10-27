@@ -1,0 +1,1181 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset,
+legend, button, input, textarea, th, td{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*@font-face {*/
+    /*font-family: 'icomoon';*/
+    /*src:  url('fonts/icomoon.eot?1x1j55');                           /!* 注意此处引用的路径*!/*/
+    /*src:  url('fonts/icomoon.eot?1x1j55#iefix') format('embedded-opentype'),*/
+    /*url('fonts/icomoon.ttf?1x1j55') format('truetype'),*/
+    /*url('fonts/icomoon.woff?1x1j55') format('woff'),*/
+    /*url('fonts/icomoon.svg?1x1j55#icomoon') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
+body {
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+input {
+    border:0;
+    outline: none;
+}
+
+.w {
+    width: 1366px;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    height: 40px;
+}
+.header-h {
+    width: 100%;
+    height: 40px;
+    box-shadow: 5px 2px 6px #F5F5F5;
+    background-color: white;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.topNav {
+    width: 1000px;
+    height: 40px;
+    margin: 0 auto;
+    /*background-color: pink;*/
+}
+.startGame-logo {
+    width: 125px;
+    height: 15px;
+    margin-top: 12px;
+    float: left;
+}
+.small-logo {
+    width: 90px;
+    height: 16px;
+    margin: 12px 60px 0 0;
+    float: right;
+    position: relative;
+}
+.navLinks {
+    width: 250px;
+    height: 140px;
+    position: absolute;
+    right: -10px;
+    top: 36px;
+    border-radius: 10px;
+    background: url("../images/top-nav-hover-div-bg.png") no-repeat ;
+    background-size: 106%;
+    /*overflow: hidden;*/
+    background-position: -5px -10px;
+    padding: 12px 11px;
+    box-sizing: border-box;
+    display: none;
+}
+.navLinks ul li {
+    width: 114px;
+    height: 31px;
+    float: left;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+.navLinks ul li:nth-child(2n) {
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+.navLinks ul li:hover {
+    background-color: #EB90A8;
+    opacity: 0.7;
+}
+.navLinks ul li a {
+    font-size: 12px;
+    color: black;
+}
+
+nav {
+    height: 590px;
+    background: url("../images/bg1.jpg") no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-position: -5px -92px;
+}
+.mediaPlatform {
+    width: 846px;
+    height: 497px;
+    margin: 0 auto;
+    /*background-color: skyblue;*/
+}
+.mediaImg {
+    width: 354px;
+    height: 497px;
+    float: left;
+    /*background-color: skyblue;*/
+    /*padding-top: 240px;*/
+    box-sizing: border-box;
+    line-height: 50px;
+    position: relative;
+}
+#logoMain {
+    display: none;
+    position: absolute;
+    top: 200px;
+}
+#slogan {
+    display: none;
+    position: absolute;
+    top: 400px;
+}
+.navBlock {
+    width: 396px;
+    height: 497px;
+    float: right;
+    /*background-color: skyblue;*/
+    /*padding-top: 225px;*/
+    box-sizing: border-box;
+}
+.navBlock ul li a {
+    width: 100px;
+    height: 111px;
+    background: url("../images/honeycomb.png") no-repeat;
+    background-position: 0 0;
+    background-size: 100px;
+    float: left;
+    margin-left: 9px;
+    padding-top: 58px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    /*掉落前的原始位置*/
+    top: -300px;
+    /*display: none;*/
+    opacity: 0;
+}
+
+.navBlock ul li:nth-child(4) a {
+    margin-left: 64px;
+}
+.navBlock ul li a span {
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    position: absolute;
+    left: 34px;
+    top: 23px;
+}
+.navBlock ul li a span img {
+    width: 100%;
+}
+.navBlock ul li a:hover {
+    background: url("../images/honeycomb.png") no-repeat;
+    background-position: 0 -111px;
+    background-size: 100px;
+}
+.mediaResource {
+    height: 610px;
+    /*background-color: lightgrey;*/
+    position: relative;
+    overflow: hidden;
+}
+/*<!--背景左上角扇形-->*/
+.fanShaped {
+    width: 460px;
+    height: 460px;
+    /*background-color: pink;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.fanShapedBg {
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    background-color: #F7FAFC;
+    margin-left: -260px;
+    margin-top: -260px;
+}
+/*<!--背景右下角半圆-->*/
+.semicircle {
+    width: 316px;
+    height: 316px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.semicircleBg {
+    width: 316px;
+    height: 316px;
+    border-radius: 50%;
+    background-color: #F7FAFC;
+    position: absolute;
+    right: -190px;
+}
+/*<!--文字背景图-->*/
+.mediaResourceImg {
+    width: 492px;
+    height: 44px;
+    position: absolute;
+    top: 38px;
+    left: 432px;
+    background: url("../images/media-resources.png") no-repeat;
+    background-size: contain;
+}
+/*标题*/
+.mediaResourceTitle {
+    width: 99px;
+    height: 25px;
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    color: #F04861;
+    font-weight: 900;
+}
+.mediaResourceTitle span {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    left: -40px;
+    top: 14px;
+}
+.mediaResourceTitle i {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    right: -32px;
+    top: 14px;
+}
+/*中间主题部分*/
+.ResourceMain {
+    width: 1024px;
+    height: 403px;
+    /*background-color: skyblue;*/
+    margin: 152px auto;
+}
+/*列表选项*/
+.ResourceList {
+    width: 477px;
+    height: 47px;
+    margin: 0 auto;
+    /*background-color: pink;*/
+    position: relative;
+}
+.ResourceList ul li a {
+    width: 143px;
+    height: 47px;
+    background: url("../images/slide-nav-bg.png") no-repeat;
+    background-size: 143px 94px;
+    background-position: 0 0;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 24px;
+    text-align: center;
+    padding-top: 14px;
+    font-size: 17px;
+    color: #00005A;
+    font-weight: 600;
+    position: relative;
+    top: -55px;
+}
+.ResourceList ul li:nth-child(3) a {
+    margin-right: 0;
+}
+.ResourceList ul li:nth-child(1) a {
+    color: #FFFFFF;
+    background: url("../images/slide-nav-bg.png") no-repeat;
+    background-size: 143px 94px;
+    background-position: 0 -47px;
+}
+/*js中实现鼠标经过事件，css这里无法排他*/
+/*.ResourceList ul li a:hover {*/
+    /*color: #FFFFFF;*/
+    /*background: url("../images/slide-nav-bg.png") no-repeat;*/
+    /*background-size: 143px 94px;*/
+    /*background-position: 0 -47px;*/
+/*}*/
+.ResourceDes {
+    height: 347px;
+    margin-top: 9px;
+    /*background-color: pink;*/
+}
+.ResourceDes ul li {
+    height: 347px;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    /*top: 0;*/
+}
+.ResourceDes ul li:first-child {
+    width: 166px;
+    /*background-color: yellow;*/
+    background: url("../images/slide-div-left.png") no-repeat;
+    background-size: 166px 347px;
+    left: -100px;
+}
+.ResourceDes ul li:last-child {
+    width: 166px;
+    /*background-color: yellow;*/
+    background: url("../images/slide-div-right.png") no-repeat;
+    background-size: 166px 347px;
+    right: -100px;
+}
+.ResourceDes ul li:nth-child(2) {
+    width: 692px;
+    background-color: #F7FAFC;
+    padding-top: 38px;
+    padding-right: 244px;
+    position: relative;
+    text-indent: 2em;
+    top: 100px;
+}
+.ResourceDes ul li:nth-child(2) div.hide {
+    display: none;
+}
+.ResourceDes ul li:nth-child(2) a {
+    color: #000000;
+    font-size: 14px;
+}
+.ResourceDes ul li:nth-child(2) a:first-child {
+    color: #F04861;
+    font-weight: 600;
+    font-size: 16px;
+}
+.ResourceDes ul li:nth-child(2) span {
+    width: 11px;
+    height: 13px;
+    position: absolute;
+    left: -22px;
+    top: 38px;
+}
+.ResourceDes ul li:nth-child(2).hide {
+    display: none;
+}
+.ResourceDes ul li:nth-child(2) p {
+    margin-top: 18px;
+    line-height: 22px;
+}
+.ResourceDes ul li:nth-child(2) a:nth-child(2):hover {
+    color: #C58188;
+}
+.ResourceDes ul li:nth-child(2) i {
+    width: 230px;
+    height: 59px;
+    position: absolute;
+    right: 1px;
+    bottom: 192px;
+    text-indent: 0;
+}
+/*两侧stargame垂直图片，公共设置*/
+.mediaStarGameL, .mediaStarGameR {
+    width: 15px;
+    height: 100px;
+}
+.mediaStarGameL {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mediaStarGameR {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*社区start*/
+.community {
+    height: 610px;
+    background-color: #F2F5F7;
+    position: relative;
+    overflow: hidden;
+}
+/*<!--背景左下角扇形-->*/
+.communityFanShaped {
+    width: 460px;
+    height: 460px;
+    /*background-color: pink;*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.communityFanShapedBg {
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    background-color: #EBF1F5;
+    margin-left: -260px;
+    margin-top: 260px;
+}
+/*<!--背景右中间半圆-->*/
+.communitySemicircle {
+    width: 316px;
+    height: 316px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+.communitySemicircleBg {
+    width: 316px;
+    height: 316px;
+    border-radius: 50%;
+    background-color: #EBF1F5;
+    position: absolute;
+    right: -190px;
+}
+/*<!--文字背景图-->*/
+.communityImg {
+    width: 339px;
+    height: 43px;
+    position: absolute;
+    top: 38px;
+    left: 514px;
+    background: url("../images/community.png") no-repeat;
+    background-size: contain;
+}
+/*标题*/
+.communityTitle {
+    width: 53px;
+    height: 25px;
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    color: #F04861;
+    font-weight: 900;
+}
+/*横杠左*/
+.communityTitle span {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    left: -40px;
+    top: 14px;
+}
+/*横杠右*/
+.communityTitle i {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    right: -32px;
+    top: 14px;    
+}
+/*中间主题部分*/
+.communityMain {
+    width: 1021px;
+    height: 373px;
+    /*background-color: skyblue;*/
+    margin: 158px auto;
+    position: relative;
+}
+/*图一*/
+.communityMain a:first-child {
+    width: 332px;
+    height: 373px;
+    background: url("../images/community-nga-before.png") no-repeat;
+    background-size: 332px 744px;
+    background-position: 0 0;
+    position: absolute;
+    left: -150px;
+    opacity: 0;
+    /*background-color: pink;*/
+}
+.communityMain a:first-child:hover {
+    background: url("../images/community-nga-before.png") no-repeat;
+    background-size: 332px 746px;
+    background-position: 0 -374px;
+}
+/*图三*/
+.communityMain a:nth-child(3) {
+    width: 332px;
+    height: 373px;
+    background: url("../images/community-a9vg.png") no-repeat;
+    background-size: 332px 744px;
+    background-position: 0 0;
+    box-sizing: border-box;
+    position: absolute;
+    right: -150px;
+    opacity: 0;
+    /*background-color: pink;*/
+}
+.communityMain a:nth-child(3):hover {
+    background: url("../images/community-a9vg.png") no-repeat;
+    background-size: 332px 746px;
+    background-position: 0 -374px;
+}
+
+/*图二*/
+.communityMain a:nth-child(2) {
+    width: 332px;
+    height: 373px;
+    background: url("../images/community-dospy.jpg") no-repeat;
+    background-size: 332px 744px;
+    background-position: 0 0;
+    position: absolute;
+    top: -150px;
+    right: 343px;
+    opacity: 0;
+}
+.communityMain a:nth-child(2):hover {
+    background: url("../images/community-dospy.jpg") no-repeat;
+    background-size: 332px 746px;
+    background-position: 0 -373px;
+}
+/*communityDes三个板块内隐藏的说明*/
+.communityDes {
+    width: 332px;
+    height: 373px;
+    text-align: center;
+    display: none;
+}
+.communityDes img {
+    width: 186px;
+    height: 60px;
+    margin-top: 50px;
+}
+.communityDes p {
+    width: 280px;
+    line-height: 20px;
+    font-size: 14px;
+    color: black;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+/*新媒体newMedia*/
+.newMedia {
+    height: 610px;
+    /*background-color: lightgrey;*/
+    position: relative;
+}
+/*<!--文字背景图-->*/
+.newMediaImg {
+    width: 322px;
+    height: 44px;
+    position: absolute;
+    top: 38px;
+    left: 522px;
+    background: url("../images/new-media.png") no-repeat;
+    background-size: contain;
+}
+/*标题*/
+.newMediaTitle {
+    width: 74px;
+    height: 24px;
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    color: #F04861;
+    font-weight: 900;
+}
+/*横杠左*/
+.newMediaTitle span {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    left: -40px;
+    top: 14px;
+}
+/*横杠右*/
+.newMediaTitle i {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    right: -32px;
+    top: 14px;
+}
+.newMediaBgPic {
+    width: 992px;
+    height: 489px;
+    position: absolute;
+    top: 121px;
+    left: 187px;
+    /*background-color: skyblue;*/
+    background: url("../images/new-media-bg.jpg");
+    background-size: 992px 489px;
+}
+.itemLogo {
+    width: 578px;
+    height: 396px;
+    margin: 62px auto;
+    position: relative;
+    box-sizing: border-box;
+}
+.itemLogo img {
+    padding: 17px;
+    position: absolute;
+    /*/!*transition: 0.3s all;*!/ 影响js动画流畅效果*/
+    opacity: 0;
+}
+/*改为js添加类，transition影响js动画流畅度*/
+/*.itemLogo img:hover {*/
+    /*box-shadow: 10px 10px 10px #CFCFCF;*/
+    /*transform: translate(-10px,-10px);*/
+/*}*/
+/*需通过js添加的类*/
+/*.addTransform {*/
+    /*box-shadow: 10px 10px 10px #CFCFCF;*/
+    /*transform: translate(-10px,-10px);*/
+    /*transition: 0.3s all;*/
+/*}*/
+
+/*itemLogo 5个图片位置设置*/
+.itemLogo img:nth-child(1) {
+    left: 76px;
+}
+.itemLogo img:nth-child(2) {
+    right: 137px;
+}
+.itemLogo img:nth-child(3) {
+    left: 60px;
+    top: 154px;
+}
+.itemLogo img:nth-child(4) {
+    right: 108px;
+    top: 154px;
+}
+.itemLogo img:nth-child(5) {
+    right: 167px;
+    bottom: 73px;
+}
+/*页面中间背景图及5个logo左半边*/
+.mediaPlatformL {
+    width: 445px;
+    height: 507px;
+    position: absolute;
+    top: -18px;
+    left: -187px;
+    /*background-color: pink;*/
+}
+.mediaPlatformL li {
+    width: 208px;
+    height: 68px;
+    margin-bottom: 78px;
+    position: relative;
+}
+.mediaPlatformL li p {
+    text-align: center;
+    background-color: #F5F6F7;
+    padding-top: 14px;
+    line-height: 25px;
+    box-sizing: border-box;
+    margin-bottom: 78px;
+    border-radius: 10px;
+}
+.mediaPlatformL li img {
+    width: 45px;
+    height: 59px;
+    position: absolute;
+    top: 9px;
+    /*right: -94px; */  /*动画后的位置*/
+    right: -200px;
+    opacity: 0;
+}
+
+.mediaPlatformL li:nth-child(4) img {
+    top: -20px;
+}
+.mediaPlatformL li:nth-child(1) {
+    margin-left: 27px;
+}
+.mediaPlatformL li:nth-child(3) {
+    margin-left: 27px;
+}
+.mediaPlatformL li:nth-child(4) {
+    margin-left: 198px;
+}
+
+
+/*页面中间背景图及5个logo右半边*/
+.mediaPlatformR {
+    width: 370px;
+    height: 507px;
+    position: absolute;
+    top: -18px;
+    right: -127px;
+    /*background-color: pink;*/
+}
+.mediaPlatformR li {
+    margin-bottom: 78px;
+    position: relative;
+}
+.mediaPlatformR li p {
+    width: 208px;
+    height: 68px;
+    text-align: center;
+    background-color: #F5F6F7;
+    padding-top: 14px;
+    line-height: 25px;
+    box-sizing: border-box;
+    margin-bottom: 78px;
+    border-radius: 10px;
+}
+.mediaPlatformR li img {
+    width: 45px;
+    height: 59px;
+    position: absolute;
+    top: 9px;
+    /*/!*left: -94px;*!/ 动画后的位置*/
+    left: -200px;
+    opacity: 0;
+}
+
+/*第四个位置要高些*/
+.mediaPlatformR li:nth-child(4) img {
+    top: -20px;
+}
+.mediaPlatformR li:nth-child(1) {
+    margin-left: 151px;
+}
+.mediaPlatformR li:nth-child(2) {
+    margin-left: 122px;
+}
+.mediaPlatformR li:nth-child(3) {
+    margin-left: 151px;
+}
+.mediaPlatformR li:nth-child(4) {
+    margin-left: 74px;
+}
+/*<!--流量平台flowPlatform start-->*/
+.flowPlatform {
+    height: 610px;
+    background-color: #F2F5F7;
+    position: relative;
+    overflow: hidden;
+}
+/*<!--文字背景图-->*/
+.flowPlatformImg {
+    width: 481px;
+    height: 41px;
+    position: absolute;
+    top: 38px;
+    left: 442px;
+    background: url("../images/flow-platform.png") no-repeat;
+    background-size: contain;
+}
+/*标题*/
+.flowPlatformTitle {
+    width: 98px;
+    height: 25px;
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    color: #F04861;
+    font-weight: 900;
+}
+/*横杠左*/
+.flowPlatformTitle span {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    left: -40px;
+    top: 14px;
+}
+/*横杠右*/
+.flowPlatformTitle i {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    right: -32px;
+    top: 14px;
+}
+/*<!--背景左上角扇形-->*/
+.flowPlatformFanShaped {
+    width: 460px;
+    height: 460px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.flowPlatformFanShapedBg {
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    background-color: #EBF1F5;
+    margin-left: -260px;
+    margin-top: -260px;
+}
+/*<!--背景右下角半圆-->*/
+.flowPlatformSemicircle {
+    width: 316px;
+    height: 316px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.flowPlatformSemicircleBg {
+    width: 316px;
+    height: 316px;
+    border-radius: 50%;
+    background-color: #EBF1F5;
+    position: absolute;
+    right: -190px;
+}
+/*流量平台中央的动画块*/
+.flowBlock {
+    width: 636px;
+    height: 430px;
+    margin: 144px auto;
+    /*background-color: skyblue;*/
+}
+.flowBlock li {
+    position: relative;
+}
+.flowBlock ul li a {
+    width: 189px;
+    height: 213px;
+    line-height: 213px;
+    background: url("../images/plat-honey-bg.png") no-repeat;
+    background-position: 0 0;
+    background-size: 189px 428px;
+    float: left;
+    margin-right: 34px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 26px;
+    color: black;
+    position: relative;
+    top: -600px;
+    /*background-color: yellow;*/
+    opacity: 0;
+}
+.flowBlock ul li:nth-child(2) a {
+    margin-top: 25px;
+}
+.flowBlock ul li:nth-child(3) a {
+    margin-right: 0;
+}
+.flowBlock ul li:nth-child(4) a {
+    left: 111px;
+    margin-top: -25px;
+}
+.flowBlock ul li:nth-child(5) a {
+    right: -114px;
+    margin-top: -25px;
+}
+.flowBlock span {
+    width: 189px;
+    height: 213px;
+    line-height: 25px;
+    padding: 60px 20px;
+    position: absolute;
+    box-sizing: border-box;
+}
+.add_bg {
+    background: url("../images/plat-honey-bg.png") no-repeat;
+    background-position: 0 -212px;
+    background-size: 189px 426px;
+}
+.flowBlock span p {
+    text-align: center;
+    font-size: 12px;
+    color: #FFF;
+    display: none;
+}
+.flowBlock ul li:nth-child(1) span {
+    left: 0;
+    top: 0;
+}
+.flowBlock ul li:nth-child(2) span {
+     left: 223px;
+     top: 25px;
+}
+.flowBlock ul li:nth-child(3) span {
+  right: 1px;
+  top: 0;
+}
+.flowBlock ul li:nth-child(4) span {
+    left: 111px;
+    top: 213px;
+}
+.flowBlock ul li:nth-child(5) span {
+    right: 110px;
+    top: 213px;
+}
+/*KOL start*/
+.KOL {
+    height: 480px;
+    background-color: #F2F5F7;
+    overflow: hidden;
+    border-top: 2px solid lightgrey;
+    position: relative;
+}
+/*<!--文字背景图-->*/
+.KOLImg {
+    width: 113px;
+    height: 43px;
+    position: absolute;
+    top: 38px;
+    left: 626px;
+    background: url("../images/kol1.png") no-repeat;
+    background-size: contain;
+}
+/*标题*/
+.KOLTitle {
+    width: 51px;
+    height: 21px;
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    color: #F04861;
+    font-weight: 900;
+}
+/*横杠左*/
+.KOLTitle span {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    left: -40px;
+    top: 14px;
+}
+/*横杠右*/
+.KOL i {
+    width: 25px;
+    border: 1px solid #F04861;
+    position: absolute;
+    right: -32px;
+    top: 14px;
+}
+.KOLDes {
+    width: 697px;
+    height: 17px;
+    font-size: 12px;
+    color: #151612;
+    position: absolute;
+    top: 135px;
+    left: 334px;
+}
+.KOLActorImg {
+    width: 710px;
+    height: 306px;
+    margin: 164px auto;
+    /*background-color: pink;*/
+}
+.KOLActorImg span {
+    width: 120px;
+    height: 134px;
+    margin-right: 22px;
+    display: inline-block;
+    text-align: center;
+    line-height: 207px;
+    box-sizing: border-box;
+    /*background-color: pink;*/
+}
+.KOLActorImg span:nth-child(5) {
+    margin-right: 0;
+}
+.KOLActorImg span:nth-child(6) {
+    margin-left: 75px;
+}
+
+/*艺人图动画效果*/
+/*.KOLActorImg span img {*/
+    /*width: 30%;*/
+    /*animation: goback 2s ease infinite;*/
+/*}*/
+/*.KOLActorImg span:nth-child(2n) img {*/
+    /*animation-delay: 0.1s;*/
+/*}*/
+/*@keyframes goback {*/
+    /*0%{}*/
+    /*20%{*/
+        /*transform: scale(3.2, 3.2);*/
+    /*}*/
+    /*40%{*/
+        /*transform: scale(2.8, 2.8);*/
+    /*}*/
+    /*50%{*/
+        /*transform: scale(3.2, 3.2));*/
+    /*}*/
+    /*95%{*/
+        /*transform: scale(3, 3));*/
+    /*}*/
+    /*100%{*/
+        /*transform: scale(3.2, 3.2);*/
+    /*}*/
+/*}*/
+.KOLActorImg span img {
+    width: 30%;
+    animation: actorScale 2s ease infinite;
+}
+.KOLActorImg span:nth-child(2n) img {
+    width: 30%;
+    animation-delay: 0.2s;
+}
+@keyframes actorScale {
+    0%{}
+    20%{
+        transform: scale(3.2, 3.2);
+    }
+    40%{
+        transform: scale(2.8, 2.8);
+    }
+    50%{
+        transform: scale(3.2, 3.2));
+    }
+    60%{
+        transform: scale(1, 1));
+    }
+    100%{
+        transform: scale(3.2, 3.2);
+    }
+}
+
+.footerB {
+    height: 130px;
+    background-color: #2B1426;
+    overflow: hidden;
+}
+.footText {
+    width: 561px;
+    height: 120px;
+    /*background-color: pink;*/
+    margin: 10px auto;
+    position: relative;
+}
+.footTextRow1 {
+    height: 17px;
+    /*background-color: skyblue;*/
+}
+.footTextRow1 a {
+    font-size: 12px;
+    color: #663B5B;
+    display: inline-block;
+    margin-right: 33px;
+    position: relative;
+}
+.footTextRow1 a:nth-child(6) {
+    margin-right: 0;
+}
+.footTextRow1 a span {
+    height: 14px;
+    position: absolute;
+    border: 1px solid #663B5B;
+    top: -2px;
+    right: -18px;
+}
+.footTextRow2 {
+    height: 21px;
+    margin: 4px auto;
+    box-sizing: border-box;
+}
+.footTextRow2 a {
+    font-size: 12px;
+    color: #663B5B;
+    display: inline-block;
+    margin-right: 33px;
+}
+.footTextRow2 a:nth-child(1) {
+    margin-left: 29px;
+}
+.footTextRow2 a:nth-child(3) {
+    margin-right: 20px;
+}
+.footTextRow3 {
+    text-align: center;
+}
+.footTextRow3 a {
+    font-size: 12px;
+    color: #663B5B;
+}
+.footTextRow4 {
+    text-align: center;
+    margin-top: 6px;
+    position: relative;
+}
+.footTextRow4 a {
+    font-size: 12px;
+    color: #60524D;
+}
+.footTextRow4 span {
+    position: absolute;
+    top: 2px;
+    left: 169px;
+}
+.footTextRow4 span img {
+    width: 16px;
+
+}
+.footTextRow5 {
+    font-size: 14px;
+    color: #663B5B;
+    text-align: center;
+    margin-top: 7px;
+}
+.footImg {
+    width: 128px;
+    height: 38px;
+    position: absolute;
+    top: 28px;
+    left: -224px;
+}
+/*sideNav侧边固定导航start*/
+.sideNav {
+    width: 56px;
+    height: 398px;
+    position: fixed;
+    right: -100px;
+    top: 138px;
+    opacity: 0;
+    /*background-color: skyblue;*/
+}
+.sideNav ul li {
+    width: 56px;
+    height: 61px;
+    background: url("../images/honeycomb.png") no-repeat;
+    background-position: 0 0;
+    background-size: 56px 122px;
+    padding-top: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    /*background-color: pink;*/
+    margin-bottom: 6px;
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+
+}
+
+.sideNav ul li span {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: 18px;
+    top: 9px;
+}
+.sideNav ul li span img {
+    width: 100%;
+}
+.sideNav ul li:first-child p {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    transform: rotateZ(-90deg);
+    font-size: 18px;
+}
+.sideNav ul li:hover {
+    background: url("../images/honeycomb.png") no-repeat;
+    background-position: 0 -61px;
+    background-size: 56px 122px;
+    cursor: pointer;
+}
+

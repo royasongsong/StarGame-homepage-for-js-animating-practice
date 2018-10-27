@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星游传媒_综合性游戏媒体平台 着力于游戏资讯的快速精准传播</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="Description" content="星游传媒(StarGame)是一家综合性游戏媒体平台,网站成立于2014年,着力于游戏资讯的快速精准传播,服务于广大玩家及游戏供应商,努力打造成专业、权威的游戏媒体平台。"/>
+    <meta name="Keywords" content="星游传媒,stargame,游戏媒体,完美世界"/>
+    <script>
+        goPAGE();
+        function goPAGE() {
+            if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                console.log("H5");
+                location.href="H5index.html";
+            }
+            else {
+                console.log("PC端")
+            }
+        }
+    </script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/jquery.fullpage.js"></script>
+    <script src="js/load.js"></script>
+    <script src="js/js.js"></script>
+    <script type="text/javascript">
+/*        var pix=1/window.devicePixelRatio;
+        var ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)){
+            var version = parseFloat(RegExp.$1);
+            if(version>2.3){
+                document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+pix+', maximum-scale='+pix+', minimum-scale='+pix+'"/>');
+            }else{
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi">');
+            }
+        }
+        else {
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+pix+', maximum-scale='+pix+', minimum-scale='+pix+'"/>');
+        }*/
+        var supportsOrientationChange = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+        var timeoutId;
+        function setRem() {
+            var clientWidth = document.documentElement.clientWidth;
+            var nowPX = clientWidth / 1920 * 100;
+            document.documentElement.style.fontSize = nowPX + 'px';
+        }
+        setRem();
+        window.addEventListener(supportsOrientationChange, function () {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(function () {
+                setRem();
+            }, 300);
+        }, false);
+
+        /*判断横竖屏*/
+        function hengshuping(){
+            if(window.orientation==180||window.orientation==0){
+                console.log("OK");
+            }
+            if(window.orientation==90||window.orientation==-90){
+                alert("竖屏观看更佳！")
+            }
+        }
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+    </script>
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的浏览器版本过低，请使用其他浏览器！");
+        }
+    </script>
+</head>
+<body>
+<div class="loading">
+    <div class="load-circle">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p class="loading-text">0%<span class="loading-percent"></span></p>
+</div>
+<div class="top-nav">
+    <div class="top-nav-div">
+        <img src="images/index-stargame-logo.png">
+        <div class="top-nav-div-right">
+            <img src="images/top-nav--right-bg.png">
+        </div>
+        <div class="top-nav-hover-div">
+            <ul>
+                <li><a href="http://www.178.com/" target="_blank">178游戏网</a></li>
+                <li><a href="http://www.nga.cn/" target="_blank">NGACN</a></li>
+                <li><a href="http://www.tgbus.com/" target="_blank">电玩巴士</a></li>
+                <li><a href="http://www.ptbus.com/" target="_blank">口袋巴士</a></li>
+                <li><a href="http://www.a9vg.com/" target="_blank">A9VG</a></li>
+                <li><a href="http://www.766.com/" target="_blank">766星竞界</a></li>
+                <li><a href="http://www.dospy.com/" target="_blank">dospy智能手机</a></li>
+                <li><a href="http://www.xyous.com/" target="_blank">星游社</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="fullpage">
+    <div class="section">
+        <img src="images/logo-main.png" class="logo fadeindown">
+        <img src="images/slogan.png" class="slogan fadeinup">
+        <p style="font-size: 16px;color: #ccc;">该网站正在内部测试，敬请期待正式版上线</p>
+        <div class="honey" id="honey">
+            <div class="honey-div1 honey01 honeyclick">
+                <img src="images/icon-submedias.png" class="honey-icon">
+                <p>媒体资源</p>
+            </div>
+            <div class="honey-div2 honey02 honeyclick">
+                <img src="images/icon-community.png" class="honey-icon">
+                <p>社区</p>
+            </div>
+            <div class="honey-div3 honey03 honeyclick">
+                <img src="images/icon-media.png" class="honey-icon">
+                <p>新媒体</p>
+            </div>
+            <div class="honey-div4 honey04 honeyclick">
+                <img src="images/icon-plat.png" class="honey-icon">
+                <p>流量平台</p>
+            </div>
+            <div class="honey-div5 honey05 honeyclick">
+                <img src="images/icon-kol.png" class="honey-icon">
+                <p>KOL</p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="Submedias">
+        <img src="images/media-resources.png" class="media-resources">
+        <p>— 媒体资源 —</p>
+        <div class="slide">
+            <ul class="slide-nav">
+                <li class="slide-nav-li nav-on">电玩巴士</li>
+                <li class="slide-nav-li">口袋巴士</li>
+                <li class="slide-nav-li">178</li>
+            </ul>
+            <div class="slide-div">
+                <img src="images/slide-div-left.png" class="slide-div-left">
+                <img src="images/slide-div-right.png" class="slide-div-right">
+                <div class="slide-div-content">
+                    <div class="slide-div-content-in-div" id="to-tgbus">
+                        <a href="subMedia/tgbus.html" target="_blank">
+                            <img src="images/dot.png" class="dot">
+                            <span>电玩巴士</span>
+                            <p>电玩巴士(Tgbus.com)是国内专业的游戏综合媒体。网站以主机单机游戏为核心，逐步向网游手游以及IT数码领域发展，同时拥有大量的线上和线下直营店以及加盟店。目前已是国内用户类型覆盖面较广的综合游戏门户。</p>
+                            <p>目前，电玩巴士已是国内用户类型覆盖面较广的集游戏推荐、攻略心得、精品视频和栏目、电商消费等内容为一体的综合游戏门户。 </p>
+                            <p>
+                                <i>>>>查看详情</i>
+                            </p>
+
+                            <img src="images/sub-logo-tgbus.png" class="submedias-img">
+                        </a>
+
+                    </div>
+                    <div class="slide-div-content-in-div" id="to-pubus">
+                        <a href="subMedia/ptbus.html" target="_blank">
+                            <img src="images/dot.png" class="dot">
+                            <span>口袋巴士</span>
+                            <p>口袋巴士（北京手游达趣科技有限公司，ptbus.com）是国内权威的手机游戏垂直门户，成立于2013年7月。口袋巴士核心团队皆为手机游戏媒体行业最早期开拓者，有着专业丰富的网站运营经验。</p>
+                            <p>经过不断探索发展，网站开拓了游戏专区、论坛、新闻、评测、礼包发号、线上活动等一系列手游媒体业务，服务于国内庞大的手游玩家群体，并长期引导着行业发展变化。</p>
+                            <p>
+                                <i>>>>查看详情</i>
+                            </p>
+                            <img src="images/sub-logo-ptbus.png" class="submedias-img">
+                        </a>
+                    </div>
+                    <div class="slide-div-content-in-div" id="to-178">
+                        <a href="subMedia/178.html" target="_blank">
+                            <img src="images/dot.png" class="dot">
+                            <span>178</span>
+                            <p>
+                                178游戏网成立于2008年，隶属于重庆星游传媒有限公司，是国内专业游戏门户之一。其拥有功能全面的辅助工具“大脚”、汇聚二次元同好的“ACG频道”，还有覆盖90%以上的网游产品内容，包括资讯，周边，数据库，微博等内容，具有很强的用户粘性。
+
+                            </p>
+                            <p>
+                                178将坚持“一起把游戏进行到底”的品牌理念，不断为客户提供更全面、更优质、更具创意及执行力的服务，并不断为玩家提供高品质的游戏内容服务。
+                            </p>
+                            <p>
+                                <i>>>>查看详情</i>
+                            </p>
+                            <img src="images/sub-logo-178.png" class="submedias-img">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="circle circle01"></div>
+        <div class="circle circle02"></div>
+        <img src="images/stargame.png" class="stargame-left">
+        <img src="images/stargame.png" class="stargame-right">
+    </div>
+    <div class="section" id="community">
+        <img src="images/community.png" class="media-community">
+        <p>— 社区 —</p>
+        <div class="community-div">
+            <div class="community-nga">
+                <div>
+                    <a href="subMedia/nga.html" target="_blank">
+                        <img src="images/logo-nga.png">
+                        <p>NGA是一家中文综合游戏社区“艾泽拉斯国家地理”的英文缩写。2016年12月，被评选为2016年度中国十大新锐游戏媒体。讨论专区分为魔兽世界相关版块、暴雪游戏版块、热门游戏版块、综合讨论版块等版块。</p>
+                    </a>
+                </div>
+            </div>
+            <div class="community-dospy">
+                <div>
+                    <a href="subMedia/dospy.html" target="_blank">
+                        <img src="images/logo-dospy.png">
+                        <p>DOSPY，创立于2005年，在诺基亚时代专注塞班系统平台的讨论和分享，被广大网友玩家称为塞班论坛，在经历了移动操作系统大洗牌之后，成功转型为以“智能硬件”为核心的未来生活用户分享交流社区平台。</p>
+                    </a>
+                </div>
+            </div>
+            <div class="community-a9vg">
+                <div>
+                    <a href="subMedia/a9.html" target="_blank">
+                        <img src="images/logo-a9vg.png">
+                        <p>A9VG电玩部落是目前国内专业的电视游戏玩家论坛，中国权威的TVGAME论坛，中国专业TVGAME玩家的聚集地，寻找TVGAME攻略的好地方。</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="circle circle03"></div>
+        <div class="circle circle04"></div>
+        <img src="images/stargame.png" class="stargame-left">
+        <img src="images/stargame.png" class="stargame-right">
+    </div>
+    <div class="section media" id="media">
+        <img src="images/new-media.png" class="media-new">
+        <p>— 新媒体 —</p>
+        <div class="new-meida-logo">
+            <img src="images/logo-tgbus.png">
+            <img src="images/logo-ptbus.png">
+            <img src="images/logo-a9vg.png">
+            <img src="images/logo-nga.png">
+            <img src="images/logo-178.png">
+        </div>
+        <div class="new-media-plat">
+            <div>
+                <img src="images/logo-jinritoutiao.png">
+                <img src="images/logo-wangyixinwen.png">
+                <img src="images/logo-yidianzixun.png">
+                <img src="images/logo-uctoutiao.png">
+                <img src="images/logo-baidubaijia.png">
+                <img src="images/logo-weibo.png">
+                <img src="images/logo-souhu.png">
+                <img src="images/logo-weixin.png">
+            </div>
+        </div>
+        <div class="new-media-text">
+            <div class="dianwan">
+                <div class="toutiao">今日头条阅读量：<br> 3775万</div>
+                <div class="wangyi">网易号阅读量：<br> 850万</div>
+                <div class="yidian">一点资讯阅读量：<br>160万 </div>
+                <div class="uc">UC大鱼号阅读量：<br>173万 </div>
+                <div class="baijia">百家号阅读量：<br>83万 </div>
+                <div class="weibo">电玩巴士官博粉丝：<br>30.5万</div>
+                <div class="souhu">搜狐号阅读量： <br>885万</div>
+                <div class="weixin">微信公众号关注度：<br>3.5万</div>
+            </div>
+            <div class="koudai">
+                <div class="toutiao">今日头条粉丝数：<br>统计中</div>
+                <div class="wangyi">网易号阅读量：<br> 统计中</div>
+                <div class="yidian">一点资讯阅读量：<br>统计中 </div>
+                <div class="uc">UC大鱼号阅读量：<br>统计中 </div>
+                <div class="baijia">百家号阅读量：<br>统计中 </div>
+                <div class="weibo">口袋巴士官博粉丝：<br>7.2万</div>
+                <div class="souhu">搜狐号阅读量： <br>统计中</div>
+                <div class="weixin">微信公众号关注度：<br>11.3万</div>
+            </div>
+            <div class="a9vg">
+                <div class="toutiao">今日头条阅读量：<br>3174万</div>
+                <div class="wangyi">网易号阅读量：<br> 2704万</div>
+                <div class="yidian">一点资讯阅读量：<br>160万 </div>
+                <div class="uc">UC大鱼号阅读量：<br>52万</div>
+                <div class="baijia">百家号阅读量：<br>统计中</div>
+                <div class="weibo">A9VG官博粉丝：<br>统计中</div>
+                <div class="souhu">搜狐号阅读量： <br>575万</div>
+                <div class="weixin">微信公众号关注度：<br>统计中</div>
+            </div>
+            <div class="nga">
+                <div class="toutiao">今日头条订阅：<br>3.1万</div>
+                <div class="wangyi">网易号阅读量：<br> 统计中</div>
+                <div class="yidian">一点资讯阅读量：<br>统计中 </div>
+                <div class="uc">UC大鱼号阅读量：<br>统计中</div>
+                <div class="baijia">百家号阅读量：<br>统计中</div>
+                <div class="weibo">NGA官博粉丝：<br>15万</div>
+                <div class="souhu">搜狐号阅读量： <br>统计中</div>
+                <div class="weixin">微信公众号关注度：<br>3.5万</div>
+            </div>
+            <div class="178">
+                <div class="toutiao">今日头条阅读量：<br>1900万</div>
+                <div class="wangyi">网易号阅读量：<br> 1800万</div>
+                <div class="yidian">一点资讯阅读量：<br>400万 </div>
+                <div class="uc">UC大鱼号阅读量：<br>统计中</div>
+                <div class="baijia">百家号阅读量：<br>320万</div>
+                <div class="weibo">178官博粉丝：<br>统计中</div>
+                <div class="souhu">搜狐号阅读量： <br>700万</div>
+                <div class="weixin">微信公众号关注度：<br>统计中</div>
+            </div>
+        </div>
+        <img src="images/new-media-bg.jpg" class="new-media-bg">
+    </div>
+    <div class="section" id="plat">
+        <img src="images/flow-platform.png" class="media-plat">
+        <p>— 流量平台 —</p>
+        <div class="plat-div">
+            <div class="plat-honey plat-honey1">
+                <p>CPM</p>
+                <p>以各媒体的剩余流量用cpm的单价进行售卖。</p>
+            </div>
+            <div class="plat-honey plat-honey2">
+                <p>CPC</p>
+                <p>以按照点击单价来进行售卖。</p>
+            </div>
+            <div class="plat-honey plat-honey3">
+                <p>CPA</p>
+                <p>以用户下载注册并激活的单价来售卖。</p>
+            </div>
+            <div class="plat-honey plat-honey4">
+                <p>DSP</p>
+                <p>以dsp平台合作来售卖媒体广告位。</p>
+            </div>
+            <div class="plat-honey plat-honey5">
+                <p>大脚标签</p>
+                <p>以大脚客户端指定标签对应效果单价售卖。</p>
+            </div>
+        </div>
+
+        <div class="circle circle05"></div>
+        <div class="circle circle06"></div>
+    </div>
+    <div class="section" id="kol">
+        <img src="images/kol1.png" class="media-kol">
+        <p>— KOL —</p>
+        <p class="kol-introduce">星游传媒与游戏领域人气主播有坚实可靠的合作关系，掌握第一手资源，星游旗下众多各平台签约艺人，可以有针对性的进行培养。</p>
+        <div class="kol-div">
+            <img src="images/kol-img01.png">
+            <img src="images/kol-img02.png">
+            <img src="images/kol-img03.png">
+            <img src="images/kol-img04.png">
+            <img src="images/kol-img05.png">
+            <img src="images/kol-img06.png">
+            <img src="images/kol-img07.png">
+            <img src="images/kol-img08.png">
+            <img src="images/kol-img09.png">
+        </div>
+        <div class="cl">
+            <div class="c1-div">
+                <img src="images/logo-stargame.png" class="c1-logo">
+                <div class="c1-div-in">
+                    <p class="line1">
+                        <a href="http://www.stargame.com/about.html" target="_blank">关于StarGame</a> |
+                        <a href="http://www.stargame.com/terms.html" target="_blank">用户协议 </a> |
+                        <a href="http://www.stargame.com/recruit.html" target="_blank">招聘信息</a> |
+                        <a href="http://www.stargame.com/legal.html" target="_blank">法律声明</a>  |
+                        <a href="http://www.wanmei.com/jiazhang/" target="_blank">家长监护</a>  |
+                        <a href="http://en.stargame.com" target="_blank">Switch to English</a>
+                    </p>
+                    <p class="line2">
+                        <a href="http://www.miibeian.gov.cn/" target="_blank">渝ICP备14007792号-4</a>    <a href="images/license_1.jpg" target="_blank">渝网文[2015]1041-1042号</a>
+                        <a href="images/bdper.jpg" target="_blank">节目制作经营许可证渝字270号</a>
+                    </p>
+                    <p class="line3">
+                        <a href="images/zengzhi.jpg" target="_blank">增值电信业务经营许可证 渝B2-20150036
+                        </a>
+                    </p>
+                    <a class="beian line3" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002500497"><img src="images/gongan.png" ><span>渝公网安备 50019002500497号</span></a>
+                    <div class="clear"></div>
+                    <p class="line3">
+                        重庆星游传媒有限公司 Copyright © 2014-2015
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
